@@ -1,0 +1,12 @@
+Approach
+The predictor follows a classic expert system design using logical rules to assess user input. The system prompts the user for their name and then presents a numbered list of common COVID-19 symptoms, such as fever, dry cough, fatigue, and loss of taste or smell. Each symptom is mapped to a corresponding fact within the system.
+Implementation
+The implementation consists of several key components:
+•	User Interaction: The system greets the user, asks for their name, and displays a menu of symptoms to choose from.
+•	Symptom Encoding: Each listed symptom is represented both as a fact and as an option for user selection. Predicates like `symptoms(1)` or `symptom(fever)` register whether the user has that symptom.
+•	Logic and Responses: After the user selects a symptom, the system confirms detection using the `user_have(X)` predicate and provides feedback suggesting possible infection.
+•	Error Handling: If the user enters an invalid choice, the code prompts them to try again by redisplaying the symptom list.
+Results
+After implementation, the system effectively verifies user input against coded symptom facts, responds with detection messages, and alerts if an infection is possible. The interaction loop allows repeated choices until valid input is received, ensuring robust data capture.
+Analysis
+This expert system provides a straightforward, instructive model for rule-based medical diagnosis. It demonstrates fundamental concepts in logical programming, such as the use of predicates for knowledge representation and conditional branching for user interaction. While limited in scope to predefined symptoms, the system is extensible and can be adapted to other rule-driven diagnostic tasks. Key strengths include clarity, ease of use, and practical illustration of medical expert system design for educational purposes.
